@@ -1,0 +1,11 @@
+Nas funções excluir e incluir da lista ligada circular, pode ser passado uma cópia, pois a estrutura tem um PONTEIRO para cabeca, então, passar o ponteiro ou a cópia, você vai estar alterando diretamente da mesma maneira em "cabeça", assim caso adicione um outro elemento, você só ajusta os ponteiro em cabeça.      QUESTÃO DE PROVA
+
+BuscaSeqExc também pode ser passado uma cópia pois só busca na lista.
+
+
+
+LISTA* l  = ponteiro para tipo LISTA.
+
+tamanho(*l) = complementar de &, ou seja, vá na memória apontada por l, e pegue o que tem lá.
+
+*sizeof  = multiplicação

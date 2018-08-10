@@ -1,0 +1,35 @@
+/* LISTA LIGADA -- IMPLEMENTAÇÃO DINÂMICA */
+#include <malloc.h>
+
+typedef struct aux{
+    REGISTRO reg;
+    struct aux* prox;      //Cria ponteiro para o mesmo de ELEMENTO. (palavra ELEMENTO ainda não apareceu por isso se usa essa struct).
+}ELEMENTO, *PONT; //*PONT - Ponteiro para ELEMENTO. (typedef ELEMENTO* PONT) - Tipo PONT que é ponteiro de elemento (tipo de dado, não variável como acima).;
+
+typedef struct{
+    PONT inicio;
+}LISTA;
+
+void inicializar(LISTA* l){
+    l->inicio = NULL;
+}
+
+int tamanho(LISTA l){ //Como você está passando uma LISTA que tem somente um campo PONT que é ponteiro, não faz diferença passar cópia. O que muda é o acesso.
+    PONT atual = l.inicio;  //Atual recebe o ponteiro do inicio da lista.    /*Caso use ponteiro, parâm. (LISTA* l), acesso: PONT atual = l->inicio  ; ou seja, acessa inicio. */
+    int tam = 0;   //Inicializa tamanho.
+    while(atual){
+        tam++; //Aumenta 1 em tamanho.
+        atual = atual-> prox;   //Vai para o próximo endereço de prox.
+    }
+    return tam;
+}
+
+PONT buscaSeqExc(LISTA* l, TIPOCHAVE  ch, PONT* ant){ //Se fosse só busca, não tem problema mandar cópia.  PONT*  = ELEMENTO** é um ponteiro para ponteiro de elemento.
+
+}
+
+int main(){
+    LISTA l1;
+    inicializar(&l1);
+    int x = tamanho(l1);   //tamanho(&l1) caso seja ponteiro.
+}
